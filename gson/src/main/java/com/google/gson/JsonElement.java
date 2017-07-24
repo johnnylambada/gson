@@ -314,6 +314,15 @@ public abstract class JsonElement {
   }
 
   /**
+   * get a JsonPointer rooted at this element
+   *
+   * @return a new JsonPointer rooted at this element
+   */
+  public JsonPointer getPointer(){
+    return new JsonPointer(this);
+  }
+
+  /**
    * Returns a String representation of this element.
    */
   @Override
